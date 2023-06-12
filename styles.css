@@ -1,0 +1,344 @@
+*{
+    font-size: 20px;
+    font-family: 'Bruno Ace SC', cursive;
+    color: rgb(250, 241, 241);
+    text-shadow: 1px 1px rgb(5, 5, 5);
+
+}
+
+body{
+    overflow-x:hidden;
+    background-color: rgb(0,0,0);
+}
+
+
+/*
+@keyframes luz {
+    0% {
+      box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.8);
+    }
+    50% {
+      box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+      box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.8);
+    }
+}
+  
+body:hover {
+    animation: luz 1s infinite;
+}*/
+
+/* barra de navegacao */
+
+.navegacao{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-decoration: none;
+    top: 5vh;
+}
+
+.navegacao a{
+    text-decoration: none;
+}
+.navegacao a:hover{
+    color: gray;
+    scale: 1.1;
+
+}
+.name{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}   
+
+h1{
+    position: absolute;
+    top: 40vh;
+    font-size: 3em;
+    font-family: 'Bruno Ace SC', cursive;
+    color: rgb(255, 247, 247);
+    text-shadow: 1px 1px rgb(116, 112, 112);
+    animation: text infinite 5s 1s ease-in;
+    
+}
+
+@keyframes text{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+h1:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50px;
+    left: -80px;
+    bottom: -50px;
+    border: 2px solid;
+    border-color: rgb(255, 255, 253);
+}
+
+h1:before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: -80px;
+    bottom: -50px;
+    height: 45px;
+    border: 2px solid;
+    border-color: rgb(255, 255, 255);
+}
+
+/* parte 2*/
+
+.parte2{
+    position: relative;
+    top: 70vh;
+    background-color: rgb(10, 10, 10);
+    padding-bottom: 30vh;
+}
+
+.container-esquerda{
+    position: relative;
+    top: 20vh;
+    left: 10vw;
+    margin-right: 20vw;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: black;
+}
+.container-esquerda:active{
+    animation: treme 0.23s linear;
+}
+@keyframes treme{
+    0%{
+        transform: translate(0);
+    }
+    25%{
+        transform: translate(-4px, -4px);
+    }
+    50%{
+        transform: translate(4px, 4px);
+    }
+    75%{
+        transform: translate(-4px, -4px);
+
+    }
+    100%{
+        transform: translate(4px, 4px);
+
+    }
+}
+.topo-container{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    background-color: transparent;
+    border-radius: 10px 10px 0 0;
+}
+
+h2{
+    position: absolute ;
+    color: rgb(255, 255, 255);
+    padding: 0 2vw 0 2vw;
+    border-radius: 5px ;
+    font-size: 2em;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+h2:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -8px;
+    animation: line;
+    background: linear-gradient(to right, transparent, rgb(129, 126, 126) );
+
+}
+
+.experiencias p{
+    margin: 0.8vw 2vw 2vw 1vw;
+    padding-bottom: 2vw;
+    font-size: 18px;
+    text-align: left;
+}
+
+.parte3{
+    position: relative;
+    background-color: black;
+    top: 70vh;
+}
+
+
+.topo-container-direita{
+    display: flex;
+    align-items: center;
+    height: 15vh;
+    background-color: transparent;
+    justify-content: center;
+}
+.conhecimentos{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+}
+
+.card-habilidade{
+    position: relative;
+    margin-bottom: 2vh;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: rgb(10, 10, 10);
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    
+}
+
+.card-habilidade:hover {
+    transform: rotateY(180deg);
+}
+
+.card-habilidade:hover #atras{
+    display: block;
+}
+
+#frente{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    backface-visibility: hidden;
+}
+
+#atras{
+    position: absolute;
+    text-align: center;
+    margin-top: 5vh;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);  
+    display: none; 
+}
+#atras spam{
+    font-size: smaller;
+}
+
+.conhecimentos img{
+    width: 100px;
+    height: 100px;
+    background-color:  rgb(10, 10, 10);
+    border-radius: 20px;
+}
+
+
+.parte4{
+    position: relative;
+    top: 90vh;
+    background-color: rgb(10, 10, 10);
+    padding-bottom: 30vh;
+
+}
+
+.container-bot{
+    position: relative;
+    top: 10vh;
+    left: 10vw;
+    width: 80vw;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.027);
+    height: 55vh;
+   
+    overflow: hidden;
+}
+
+.container-bot:active{
+    animation: treme 0.23s linear;
+}
+.topo-container-bot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    border-radius: 10px 10px 0 0;
+    background-color: transparent;
+}
+
+.projetos{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    align-items: center;
+    margin-top: 15vh;
+    
+}
+
+/*scroll bar edição*/
+::-webkit-scrollbar{
+    background: rgb(10, 10, 10);
+    width: 12px;
+  
+}
+
+::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 0 0 15px 15px;
+}
+
+.projetos a{
+    padding: 2.5vh;
+    border: 2px solid;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.projetos img{
+    width: 200px;
+    height: 200px;
+    border-radius: 3px;
+}
+
+.projetos li{
+    text-align: center;
+    list-style:none; 
+    margin-top: 4vh;
+    border-radius: 2px;
+}
+
+
+footer{
+    position: relative;
+    top: 80vh;
+    height: 15vh;
+    background-color: rgba(34, 33, 37, 0.801);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5vw 0 5vw;
+    align-items: center;
+}
+
+.redesSociais img:hover{
+    background-color: gray;
+    border-radius: 40px;
+    scale: 1.1;
+}
+
